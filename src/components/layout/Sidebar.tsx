@@ -9,7 +9,7 @@ const Sidebar = () => {
     { label: 'Employees', icon: '👤' },
     { label: 'Payroll', icon: '💰' },
     { label: 'Machinery', icon: '⚙️' },
-    { label: 'Accounting', icon: '📊' }
+    { label: 'Reports', icon: '📊' }
   ];
 
   return (
