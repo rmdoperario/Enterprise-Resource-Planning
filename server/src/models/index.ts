@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import sequelize from './config/database';
-import * as models from './models';
+import sequelize from '../config/database';
+import './models';
 
 const app = express();
 
