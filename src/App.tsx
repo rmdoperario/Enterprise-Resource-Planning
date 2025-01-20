@@ -4,8 +4,7 @@ function App() {
   return (
     <Layout>
       <div className="p-8">
-        <h1 className="text-2xl font-semibold">Dashboard</h1>
-        {/* We'll add more components here */}
+        {/* Content will go here */}
       </div>
     </Layout>
   );
