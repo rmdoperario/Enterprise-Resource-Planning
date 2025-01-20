@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
+  const location = useLocation();
   const menuItems = [
-    { label: 'Client', icon: '👥' },
-    { label: 'Orders', icon: '📋' },
-    { label: 'Inventory', icon: '📦' },
-    { label: 'Supplier', icon: '🏭' },
-    { label: 'Employees', icon: '👤' },
-    { label: 'Payroll', icon: '💰' },
-    { label: 'Machinery', icon: '⚙️' },
-    { label: 'Reports', icon: '📊' }
+    { label: 'Client', icon: '👥', path: '/clients' },
+    { label: 'Orders', icon: '📋', path: '/orders' },
+    { label: 'Inventory', icon: '📦', path: '/inventory' },
+    { label: 'Supplier', icon: '🏭', path: '/supplier' },
+    { label: 'Employees', icon: '👤', path: '/employees' },
+    { label: 'Payroll', icon: '💰', path: '/payroll' },
+    { label: 'Machinery', icon: '⚙️', path: '/machinery' },
+    { label: 'Reports', icon: '📊', path: '/reports' }
   ];
 
   return (
@@ -43,13 +45,18 @@ const Sidebar = () => {
         {/* Menu Items */}
         <div className="space-y-1">
           {menuItems.map((item) => (
-            <button
+            <Link
               key={item.label}
-              className="flex items-center space-x-3 w-full px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg"
+              to={item.path}
+              className={`flex items-center space-x-3 w-full px-3 py-2 text-sm rounded-lg ${
+                location.pathname === item.path 
+                  ? 'bg-gray-100 text-gray-900'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
             >
               <span>{item.icon}</span>
               <span>{item.label}</span>
-            </button>
+            </Link>
           ))}
         </div>
       </div>
