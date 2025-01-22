@@ -51,7 +51,7 @@ const SupplierPage = () => {
                 <th className="p-4 text-sm font-medium">Contact number</th>
                 <th className="p-4 text-sm font-medium">Address</th>
                 <th className="p-4 text-sm font-medium">Email</th>
-                <th className="p-4 text-sm font-medium"></th>
+                <th className="p-4 text-sm font-medium">Action</th>
               </tr>
             </thead>
             <tbody>

@@ -82,7 +82,7 @@ const OrdersPage = () => {
                 <th className="p-4 text-sm font-medium">Quantity</th>
                 <th className="p-4 text-sm font-medium">Price Per Unit</th>
                 <th className="p-4 text-sm font-medium">Total Price</th>
-                <th className="p-4 text-sm font-medium"></th>
+                <th className="p-4 text-sm font-medium">Action</th>
               </tr>
             </thead>
             <tbody>
