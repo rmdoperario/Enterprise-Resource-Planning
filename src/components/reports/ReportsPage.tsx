@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ReportsPage = () => {
-  // Sample data matching your prototype
   const expenses = [
     {
       expenseId: "001",

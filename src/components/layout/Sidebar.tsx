@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Sidebar = () => {
   const location = useLocation();
   const menuItems = [
-    { label: 'Dashboard', icon: '📊', path: '/' },    // Added Dashboard as first item
+    { label: 'Dashboard', icon: '📊', path: '/' },    
     { label: 'Client', icon: '👥', path: '/clients' },
     { label: 'Orders', icon: '📋', path: '/orders' },
     { label: 'Inventory', icon: '📦', path: '/inventory' },

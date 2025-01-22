@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AttendancePage = () => {
-  // Sample data for attendance
   const employees = [
     {
       id: 1,

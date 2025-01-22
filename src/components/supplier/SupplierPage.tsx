@@ -1,37 +1,25 @@
 import React from 'react';
 
-const InventoryPage = () => {
-  const inventoryItems = [
+const SupplierPage = () => {
+  const suppliers = [
     {
-      items: "Carbonless",
-      itemDescription: "CB Top White Short",
-      currentQty: 5,
-      qty: 30,
-      unitPrice: 220,
-      total: 6600.00
+      supplierName: "GreenTech",
+      contactNumber: "0917 123 4567",
+      address: "56 Sampaguita Street, Ermita, Mdn",
+      email: "contact@paperworkph.com"
     },
     {
-      items: "Carbonless",
-      itemDescription: "CF Bottom Blue Short",
-      currentQty: 8,
-      qty: 20,
-      unitPrice: 220,
-      total: 4400
-    },
-    {
-      items: "Carbonless",
-      itemDescription: "CFB Middle Pink Short",
-      currentQty: 7,
-      qty: 30,
-      unitPrice: 245,
-      total: 7350
+      supplierName: "PaperWorld",
+      contactNumber: "0917 234 5678",
+      address: "78 Eco Lane, Quiap City, Metro Manila",
+      email: "support@ecopapersupplies.ph"
     }
   ];
 
   return (
     <div className="p-6 bg-gray-50">
       <div className="mb-4">
-        <h2 className="text-xl">Inventory</h2>
+        <h2 className="text-xl">Supplier</h2>
       </div>
 
       {/* Filters Row */}
@@ -50,9 +38,6 @@ const InventoryPage = () => {
             placeholder="Search or type a command (Ctrl + G)" 
             className="border p-2 rounded-md w-64 text-sm"
           />
-          <button className="ml-2 bg-black text-white px-4 py-2 rounded text-sm">
-            Add Item
-          </button>
         </div>
       </div>
 
@@ -62,24 +47,20 @@ const InventoryPage = () => {
           <table className="w-full">
             <thead>
               <tr className="text-left border-b">
-                <th className="p-4 text-sm font-medium">Items</th>
-                <th className="p-4 text-sm font-medium">Item Description</th>
-                <th className="p-4 text-sm font-medium">Current Qty</th>
-                <th className="p-4 text-sm font-medium">Qty</th>
-                <th className="p-4 text-sm font-medium">Unit Price</th>
-                <th className="p-4 text-sm font-medium">Total</th>
+                <th className="p-4 text-sm font-medium">Supplier name</th>
+                <th className="p-4 text-sm font-medium">Contact number</th>
+                <th className="p-4 text-sm font-medium">Address</th>
+                <th className="p-4 text-sm font-medium">Email</th>
                 <th className="p-4 text-sm font-medium"></th>
               </tr>
             </thead>
             <tbody>
-              {inventoryItems.map((item, index) => (
+              {suppliers.map((supplier, index) => (
                 <tr key={index} className="border-b">
-                  <td className="p-4 text-sm">{item.items}</td>
-                  <td className="p-4 text-sm">{item.itemDescription}</td>
-                  <td className="p-4 text-sm">{item.currentQty}</td>
-                  <td className="p-4 text-sm">{item.qty}</td>
-                  <td className="p-4 text-sm">{item.unitPrice}</td>
-                  <td className="p-4 text-sm">{item.total.toFixed(2)}</td>
+                  <td className="p-4 text-sm">{supplier.supplierName}</td>
+                  <td className="p-4 text-sm">{supplier.contactNumber}</td>
+                  <td className="p-4 text-sm">{supplier.address}</td>
+                  <td className="p-4 text-sm">{supplier.email}</td>
                   <td className="p-4">
                     <button className="text-gray-600 hover:text-gray-800">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,8 +74,15 @@ const InventoryPage = () => {
           </table>
         </div>
       </div>
+
+      {/* Add Button */}
+      <div className="mt-4 flex justify-end">
+        <button className="bg-black text-white px-4 py-2 rounded text-sm">
+          Add
+        </button>
+      </div>
     </div>
   );
 };
 
-export default InventoryPage;
+export default SupplierPage;

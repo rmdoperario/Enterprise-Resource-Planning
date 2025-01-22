@@ -1,7 +1,6 @@
 import React from 'react';
 
 const PayrollPage = () => {
-  // Sample data matching your prototype
   const payrollData = [
     {
       id: 1,

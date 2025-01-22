@@ -3,7 +3,6 @@ import { Printer, Users, Package, TrendingUp, Bell, AlertTriangle } from 'lucide
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const DashboardPage = () => {
-  // Monthly trends data
   const monthlyData = [
     { name: 'Jan', orders: 65, revenue: 120000 },
     { name: 'Feb', orders: 75, revenue: 150000 },
@@ -13,7 +12,6 @@ const DashboardPage = () => {
     { name: 'Jun', orders: 100, revenue: 220000 },
   ];
 
-  // Sample notifications data
   const notifications = [
     { type: 'warning', message: 'Low ink supply for Heidelberg printer', time: '2 hours ago' },
     { type: 'alert', message: 'New order received from Davao Tech Solutions', time: '3 hours ago' },
@@ -21,7 +19,6 @@ const DashboardPage = () => {
     { type: 'info', message: 'Monthly revenue target achieved', time: '1 day ago' },
   ];
 
-  // Sample recent orders data
   const recentOrders = [
     {
       customerName: "Allan Dela Cruz",
@@ -41,7 +38,6 @@ const DashboardPage = () => {
     }
   ];
 
-  // Sample low stock data
   const lowStockItems = [
     { item: "CB Top White Short", currentStock: 5, reorderLevel: 20 },
     { item: "Black Ink", currentStock: 3, reorderLevel: 15 },

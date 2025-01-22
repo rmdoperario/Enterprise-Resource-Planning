@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import DashboardPage from './components/dashboard/DashboardPage';
 import ClientPage from './components/client/ClientPage';
 import OrdersPage from './components/order/OrdersPage';
 import InventoryPage from './components/inventory/InventoryPage';
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
+          <Route path="/" element={<DashboardPage />} />
           <Route path="/clients" element={<ClientPage />} />
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/inventory" element={<InventoryPage />} />
@@ -22,7 +24,6 @@ function App() {
           <Route path="/payroll" element={<PayrollPage />} />
           <Route path="/machinery" element={<MachineryPage />} />
           <Route path="/reports" element={<ReportsPage />} />
-          <Route path="/" element={<ClientPage />} />
         </Routes>
       </Layout>
     </Router>

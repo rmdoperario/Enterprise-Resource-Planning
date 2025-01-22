@@ -1,7 +1,6 @@
 import React from 'react';
 
 const MachineryPage = () => {
-  // Sample data matching your prototype
   const machines = [
     {
       id: 1,

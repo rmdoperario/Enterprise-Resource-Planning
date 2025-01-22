@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ClientPage = () => {
-  // Sample data matching your prototype
   const clients = [
     {
       id: 1,

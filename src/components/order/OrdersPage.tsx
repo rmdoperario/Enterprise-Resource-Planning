@@ -1,7 +1,6 @@
 import React from 'react';
 
 const OrdersPage = () => {
-  // Sample data matching your prototype
   const orders = [
     {
       customerName: "Allan Dela Cruz",
